@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C7FFE331E1C4263001B709A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FFE321E1C4263001B709A /* AppDelegate.swift */; };
+		4C7FFE351E1C4263001B709A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FFE341E1C4263001B709A /* ViewController.swift */; };
+		4C7FFE381E1C4263001B709A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7FFE361E1C4263001B709A /* Main.storyboard */; };
+		4C7FFE3A1E1C4263001B709A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7FFE391E1C4263001B709A /* Assets.xcassets */; };
+		4C7FFE3D1E1C4263001B709A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7FFE3B1E1C4263001B709A /* LaunchScreen.storyboard */; };
+		4C7FFE4A1E1C4318001B709A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7FFE491E1C4318001B709A /* SnapKit.framework */; };
+		4C7FFE4B1E1C4321001B709A /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C7FFE491E1C4318001B709A /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C7FFE4D1E1C50F3001B709A /* KeyboardConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FFE4C1E1C50F3001B709A /* KeyboardConstraints.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C7FFE471E1C42E3001B709A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C7FFE4B1E1C4321001B709A /* SnapKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C7FFE2F1E1C4263001B709A /* snapkitkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snapkitkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7FFE321E1C4263001B709A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C7FFE341E1C4263001B709A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C7FFE371E1C4263001B709A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C7FFE391E1C4263001B709A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C7FFE3C1E1C4263001B709A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C7FFE3E1E1C4263001B709A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7FFE491E1C4318001B709A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		4C7FFE4C1E1C50F3001B709A /* KeyboardConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardConstraints.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C7FFE2C1E1C4263001B709A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7FFE4A1E1C4318001B709A /* SnapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C7FFE261E1C4263001B709A = {
+			isa = PBXGroup;
+			children = (
+				4C7FFE311E1C4263001B709A /* snapkitkeyboard */,
+				4C7FFE301E1C4263001B709A /* Products */,
+				4C7FFE441E1C42B8001B709A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C7FFE301E1C4263001B709A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C7FFE2F1E1C4263001B709A /* snapkitkeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C7FFE311E1C4263001B709A /* snapkitkeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4C7FFE321E1C4263001B709A /* AppDelegate.swift */,
+				4C7FFE341E1C4263001B709A /* ViewController.swift */,
+				4C7FFE4C1E1C50F3001B709A /* KeyboardConstraints.swift */,
+				4C7FFE361E1C4263001B709A /* Main.storyboard */,
+				4C7FFE391E1C4263001B709A /* Assets.xcassets */,
+				4C7FFE3B1E1C4263001B709A /* LaunchScreen.storyboard */,
+				4C7FFE3E1E1C4263001B709A /* Info.plist */,
+			);
+			path = snapkitkeyboard;
+			sourceTree = "<group>";
+		};
+		4C7FFE441E1C42B8001B709A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C7FFE491E1C4318001B709A /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C7FFE2E1E1C4263001B709A /* snapkitkeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C7FFE411E1C4263001B709A /* Build configuration list for PBXNativeTarget "snapkitkeyboard" */;
+			buildPhases = (
+				4C7FFE2B1E1C4263001B709A /* Sources */,
+				4C7FFE2C1E1C4263001B709A /* Frameworks */,
+				4C7FFE2D1E1C4263001B709A /* Resources */,
+				4C7FFE471E1C42E3001B709A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = snapkitkeyboard;
+			productName = snapkitkeyboard;
+			productReference = 4C7FFE2F1E1C4263001B709A /* snapkitkeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C7FFE271E1C4263001B709A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Szymon Maślanka";
+				TargetAttributes = {
+					4C7FFE2E1E1C4263001B709A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LK98J2HBA6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4C7FFE2A1E1C4263001B709A /* Build configuration list for PBXProject "snapkitkeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C7FFE261E1C4263001B709A;
+			productRefGroup = 4C7FFE301E1C4263001B709A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C7FFE2E1E1C4263001B709A /* snapkitkeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C7FFE2D1E1C4263001B709A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7FFE3D1E1C4263001B709A /* LaunchScreen.storyboard in Resources */,
+				4C7FFE3A1E1C4263001B709A /* Assets.xcassets in Resources */,
+				4C7FFE381E1C4263001B709A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C7FFE2B1E1C4263001B709A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7FFE351E1C4263001B709A /* ViewController.swift in Sources */,
+				4C7FFE4D1E1C50F3001B709A /* KeyboardConstraints.swift in Sources */,
+				4C7FFE331E1C4263001B709A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C7FFE361E1C4263001B709A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7FFE371E1C4263001B709A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C7FFE3B1E1C4263001B709A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7FFE3C1E1C4263001B709A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C7FFE3F1E1C4263001B709A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C7FFE401E1C4263001B709A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C7FFE421E1C4263001B709A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LK98J2HBA6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = snapkitkeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nahive.snapkitkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4C7FFE431E1C4263001B709A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LK98J2HBA6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = snapkitkeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nahive.snapkitkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C7FFE2A1E1C4263001B709A /* Build configuration list for PBXProject "snapkitkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7FFE3F1E1C4263001B709A /* Debug */,
+				4C7FFE401E1C4263001B709A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C7FFE411E1C4263001B709A /* Build configuration list for PBXNativeTarget "snapkitkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7FFE421E1C4263001B709A /* Debug */,
+				4C7FFE431E1C4263001B709A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C7FFE271E1C4263001B709A /* Project object */;
+}
