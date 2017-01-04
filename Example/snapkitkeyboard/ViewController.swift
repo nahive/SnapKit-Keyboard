@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     private func setup(){
         setupSubviews()
         setupObservers()
+        setupConstraints()
     }
     
     private func setupSubviews(){
@@ -63,127 +64,99 @@ class ViewController: UIViewController {
         view.registerAutomaticKeyboardConstraints()
     }
     
-    private func setupRegularConstraints(){
-        topView.snp.remakeConstraints { (make) in
+    private func setupConstraints(){
+        topView.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
-            make.top.equalTo(view.snp.top).keyboard(false, in: view)
+            make.top.equalTo(view.snp.top)
+                .automate(keyboard: false, in: view)
             make.height.equalTo(100)
         }
         
         topView.snp.prepareConstraints { (make) in
-            make.bottom.equalTo(view.snp.top).keyboard(true, in: view)
+            make.bottom.equalTo(view.snp.top)
+                .automate(keyboard: true, in: view)
         }
         
-        topViewReplacement.snp.remakeConstraints { (make) in
+        topViewReplacement.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
-            make.bottom.equalTo(view.snp.top).keyboard(false, in: view)
+            make.bottom.equalTo(view.snp.top)
+                .automate(keyboard: false, in: view)
             make.height.equalTo(100)
         }
         
         topViewReplacement.snp.prepareConstraints { (make) in
-            make.top.equalTo(view.snp.top).keyboard(true, in: view)
+            make.top.equalTo(view.snp.top)
+                .automate(keyboard: true, in: view)
         }
         
-        topMiddleView.snp.remakeConstraints { (make) in
+        topMiddleView.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(20)
             make.right.equalTo(view.snp.right).offset(-20)
+                .automate(size: .regular, in: view)
+            make.right.equalTo(view.snp.centerX).offset(-20)
+                .automate(size: .compact, keyboard: false, in: view)
             make.height.equalTo(44)
             make.centerX.equalTo(view.snp.centerX)
-            make.centerY.equalTo(view.snp.centerY).offset(-44).keyboard(false, in: view)
+                .automate(size: .regular, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-44)
+                .automate(size: .compact, keyboard: false, in: view)
+            make.centerY.equalTo(view.snp.centerY)
+                .automate(size: .compact, keyboard: false, in: view)
         }
         
         topMiddleView.snp.prepareConstraints { (make) in
-            make.centerY.equalTo(view.snp.centerY).offset(-144).keyboard(true, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-144)
+                .automate(size: .regular, keyboard: true, in: view)
+            make.right.equalTo(view.snp.centerX).offset(-64)
+                .automate(size: .compact, keyboard: true, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-44)
+                .automate(size: .compact, keyboard: true, in: view)
         }
         
-        bottomMiddleView.snp.remakeConstraints { (make) in
+        bottomMiddleView.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(20)
+                .automate(size: .regular, in: view)
+            make.left.equalTo(view.snp.centerX).offset(20)
+                .automate(size: .compact, keyboard: false, in: view)
             make.right.equalTo(view.snp.right).offset(-20)
+                .automate(size: .regular, in: view)
+            make.right.equalTo(view.snp.right).offset(-20)
+                .automate(size: .compact, keyboard: false, in: view)
             make.height.equalTo(44)
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(topMiddleView.snp.bottom).offset(44)
-        }
-        
-        bottomView.snp.remakeConstraints { (make) in
-            make.bottom.equalTo(view.snp.bottom).offset(-44).keyboard(false, in: view)
-            make.centerX.equalTo(view.snp.centerX)
-            make.width.equalTo(100)
-            make.height.equalTo(55)
-        }
-        
-        bottomView.snp.prepareConstraints { (make) in
-            make.top.equalTo(bottomMiddleView.snp.bottom).offset(20).keyboard(true, in: view)
-        }
-    }
-    
-    private func setupCompactConstraints(){
-        topView.snp.remakeConstraints { (make) in
-            make.left.equalTo(view.snp.left)
-            make.right.equalTo(view.snp.right)
-            make.top.equalTo(view.snp.top).keyboard(false, in: view)
-            make.height.equalTo(100)
-        }
-        
-        topView.snp.prepareConstraints { (make) in
-            make.bottom.equalTo(view.snp.top).keyboard(true, in: view)
-        }
-        
-        topViewReplacement.snp.remakeConstraints { (make) in
-            make.left.equalTo(view.snp.left)
-            make.right.equalTo(view.snp.right)
-            make.bottom.equalTo(view.snp.top).keyboard(false, in: view)
-            make.height.equalTo(100)
-        }
-        
-        topViewReplacement.snp.prepareConstraints { (make) in
-            make.top.equalTo(view.snp.top).keyboard(true, in: view)
-        }
-        
-        topMiddleView.snp.remakeConstraints { (make) in
-            make.left.equalTo(view.snp.left).offset(20)
-            make.right.equalTo(view.snp.centerX).offset(-20).keyboard(false, in: view)
-            make.height.equalTo(44)
-            make.centerY.equalTo(view.snp.centerY).keyboard(false, in: view)
-        }
-        
-        topMiddleView.snp.prepareConstraints { (make) in
-            make.right.equalTo(view.snp.centerX).offset(-64).keyboard(true, in: view)
-            make.centerY.equalTo(view.snp.centerY).offset(-44).keyboard(true, in: view)
-        }
-        
-        bottomMiddleView.snp.remakeConstraints { (make) in
-            make.left.equalTo(view.snp.centerX).offset(20).keyboard(false, in: view)
-            make.right.equalTo(view.snp.right).offset(-20).keyboard(false, in: view)
-            make.height.equalTo(44)
+                .automate(size: .regular, in: view)
             make.centerY.equalTo(topMiddleView.snp.centerY)
+                .automate(size: .compact, in: view)
         }
         
         bottomMiddleView.snp.prepareConstraints { (make) in
-            make.left.equalTo(topMiddleView.snp.right).offset(16).keyboard(true, in: view)
+            make.left.equalTo(topMiddleView.snp.right).offset(16)
+                .automate(size: .compact, keyboard: true, in: view)
         }
         
-        bottomView.snp.remakeConstraints { (make) in
-            make.bottom.equalTo(view.snp.bottom).offset(-44).keyboard(false, in: view)
-            make.centerX.equalTo(view.snp.centerX).keyboard(false, in: view)
+        bottomView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(view.snp.bottom).offset(-44)
+                .automate(keyboard: false, in: view)
+            make.centerX.equalTo(view.snp.centerX)
+                .automate(size: .regular, in: view)
+            make.centerX.equalTo(view.snp.centerX)
+                .automate(size: .compact, keyboard: false, in: view)
             make.width.equalTo(100)
             make.height.equalTo(55)
         }
         
         bottomView.snp.prepareConstraints { (make) in
-            make.centerY.equalTo(bottomMiddleView.snp.centerY).keyboard(true, in: view)
-            make.left.equalTo(bottomMiddleView.snp.right).offset(8).keyboard(true, in: view)
-            make.right.equalTo(view.snp.right).offset(-8).keyboard(true, in: view)
-        }
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        guard traitCollection != previousTraitCollection else { return }
-        switch traitCollection.verticalSizeClass {
-        case .regular: setupRegularConstraints()
-        case .compact: setupCompactConstraints()
-        case .unspecified: print("unspecified vertical size class")
+            make.top.equalTo(bottomMiddleView.snp.bottom).offset(20)
+                .automate(size: .regular, keyboard: true, in: view)
+            make.centerY.equalTo(bottomMiddleView.snp.centerY)
+                .automate(size: .compact, keyboard: true, in: view)
+            make.left.equalTo(bottomMiddleView.snp.right).offset(8)
+                .automate(size: .compact, keyboard: true, in: view)
+            make.right.equalTo(view.snp.right).offset(-8)
+                .automate(size: .compact, keyboard: true, in: view)
         }
     }
     
