@@ -68,95 +68,69 @@ class ViewController: UIViewController {
         topView.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
-            make.top.equalTo(view.snp.top)
-                .automate(keyboard: false, in: view)
             make.height.equalTo(100)
+            make.top.equalTo(view.snp.top).auto(keyboard: false, in: view)
         }
         
         topView.snp.prepareConstraints { (make) in
-            make.bottom.equalTo(view.snp.top)
-                .automate(keyboard: true, in: view)
+            make.bottom.equalTo(view.snp.top).auto(keyboard: true, in: view)
         }
         
         topViewReplacement.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
-            make.bottom.equalTo(view.snp.top)
-                .automate(keyboard: false, in: view)
             make.height.equalTo(100)
+            make.bottom.equalTo(view.snp.top).auto(keyboard: false, in: view)
         }
         
         topViewReplacement.snp.prepareConstraints { (make) in
-            make.top.equalTo(view.snp.top)
-                .automate(keyboard: true, in: view)
+            make.top.equalTo(view.snp.top).auto(keyboard: true, in: view)
         }
         
         topMiddleView.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left).offset(20)
-            make.right.equalTo(view.snp.right).offset(-20)
-                .automate(size: .regular, in: view)
-            make.right.equalTo(view.snp.centerX).offset(-20)
-                .automate(size: .compact, keyboard: false, in: view)
             make.height.equalTo(44)
-            make.centerX.equalTo(view.snp.centerX)
-                .automate(size: .regular, in: view)
-            make.centerY.equalTo(view.snp.centerY).offset(-44)
-                .automate(size: .compact, keyboard: false, in: view)
-            make.centerY.equalTo(view.snp.centerY)
-                .automate(size: .compact, keyboard: false, in: view)
+            make.centerX.equalTo(view.snp.centerX).auto(.regular, in: view)
+            make.right.equalTo(view.snp.right).offset(-20).auto(.regular, in: view)
+            make.right.equalTo(view.snp.centerX).offset(-20).auto(.compact, keyboard: false, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-44).auto(.compact, keyboard: false, in: view)
+            make.centerY.equalTo(view.snp.centerY).auto(.compact, keyboard: false, in: view)
         }
         
         topMiddleView.snp.prepareConstraints { (make) in
-            make.centerY.equalTo(view.snp.centerY).offset(-144)
-                .automate(size: .regular, keyboard: true, in: view)
-            make.right.equalTo(view.snp.centerX).offset(-64)
-                .automate(size: .compact, keyboard: true, in: view)
-            make.centerY.equalTo(view.snp.centerY).offset(-44)
-                .automate(size: .compact, keyboard: true, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-144).auto(.regular, keyboard: true, in: view)
+            make.right.equalTo(view.snp.centerX).offset(-64).auto(.compact, keyboard: true, in: view)
+            make.centerY.equalTo(view.snp.centerY).offset(-44).auto(.compact, keyboard: true, in: view)
         }
         
         bottomMiddleView.snp.makeConstraints { (make) in
-            make.left.equalTo(view.snp.left).offset(20)
-                .automate(size: .regular, in: view)
-            make.left.equalTo(view.snp.centerX).offset(20)
-                .automate(size: .compact, keyboard: false, in: view)
-            make.right.equalTo(view.snp.right).offset(-20)
-                .automate(size: .regular, in: view)
-            make.right.equalTo(view.snp.right).offset(-20)
-                .automate(size: .compact, keyboard: false, in: view)
             make.height.equalTo(44)
-            make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(topMiddleView.snp.bottom).offset(44)
-                .automate(size: .regular, in: view)
-            make.centerY.equalTo(topMiddleView.snp.centerY)
-                .automate(size: .compact, in: view)
+            make.left.equalTo(view.snp.left).offset(20).auto(.regular, in: view)
+            make.centerX.equalTo(view.snp.centerX).auto(.regular, in: view)
+            make.right.equalTo(view.snp.right).offset(-20).auto(.regular, in: view)
+            make.right.equalTo(view.snp.right).offset(-20).auto(.compact, keyboard: false, in: view)
+            make.left.equalTo(view.snp.centerX).offset(20).auto(.compact, keyboard: false, in: view)
+            make.centerY.equalTo(topMiddleView.snp.centerY).auto(.compact, in: view)
         }
         
         bottomMiddleView.snp.prepareConstraints { (make) in
-            make.left.equalTo(topMiddleView.snp.right).offset(16)
-                .automate(size: .compact, keyboard: true, in: view)
+            make.left.equalTo(topMiddleView.snp.right).offset(16).auto(.compact, keyboard: true, in: view)
         }
         
         bottomView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(view.snp.bottom).offset(-44)
-                .automate(keyboard: false, in: view)
-            make.centerX.equalTo(view.snp.centerX)
-                .automate(size: .regular, in: view)
-            make.centerX.equalTo(view.snp.centerX)
-                .automate(size: .compact, keyboard: false, in: view)
             make.width.equalTo(100)
             make.height.equalTo(55)
+            make.bottom.equalTo(view.snp.bottom).offset(-44).auto(keyboard: false, in: view)
+            make.centerX.equalTo(view.snp.centerX).auto(.regular, in: view)
+            make.centerX.equalTo(view.snp.centerX).auto(.compact, keyboard: false, in: view)
         }
         
         bottomView.snp.prepareConstraints { (make) in
-            make.top.equalTo(bottomMiddleView.snp.bottom).offset(20)
-                .automate(size: .regular, keyboard: true, in: view)
-            make.centerY.equalTo(bottomMiddleView.snp.centerY)
-                .automate(size: .compact, keyboard: true, in: view)
-            make.left.equalTo(bottomMiddleView.snp.right).offset(8)
-                .automate(size: .compact, keyboard: true, in: view)
-            make.right.equalTo(view.snp.right).offset(-8)
-                .automate(size: .compact, keyboard: true, in: view)
+            make.top.equalTo(bottomMiddleView.snp.bottom).offset(20).auto(.regular, keyboard: true, in: view)
+            make.centerY.equalTo(bottomMiddleView.snp.centerY).auto(.compact, keyboard: true, in: view)
+            make.left.equalTo(bottomMiddleView.snp.right).offset(8).auto(.compact, keyboard: true, in: view)
+            make.right.equalTo(view.snp.right).offset(-8).auto(.compact, keyboard: true, in: view)
         }
     }
     

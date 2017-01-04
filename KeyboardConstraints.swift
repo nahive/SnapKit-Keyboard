@@ -12,7 +12,7 @@ import SnapKit
 private var ckmSizeClass: UInt8 = 11
 extension ConstraintMakerEditable {
     @discardableResult
-    func automate(size sizeClass: UIUserInterfaceSizeClass = .unspecified, keyboard shown: Bool? = nil, in view: UIView) -> ConstraintMakerEditable {
+    func auto(_ sizeClass: UIUserInterfaceSizeClass = .unspecified, keyboard shown: Bool? = nil, in view: UIView) -> ConstraintMakerEditable {
         switch sizeClass {
         case .regular:
             if let shown = shown {
